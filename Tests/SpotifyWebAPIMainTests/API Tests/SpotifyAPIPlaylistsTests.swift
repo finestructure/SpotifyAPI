@@ -1461,27 +1461,27 @@ extension SpotifyAPIPlaylistsTests where
 
     func uploadPlaylistImage() {
 
-        let imageData = SpotifyExampleImages.annabelle
-        let encodedData = imageData.base64EncodedData()
-
-        print("encoded data count: ", encodedData.count)
-
-
-        let expectation = XCTestExpectation(
-            description: "uploadPlaylistImage"
-        )
-
-        Self.spotify.uploadPlaylistImage(
-            URIs.Playlists.test,
-            imageData: encodedData
-        )
-        .XCTAssertNoFailure()
-        .sink(receiveCompletion: { _ in
-            expectation.fulfill()
-        })
-        .store(in: &Self.cancellables)
-
-        self.wait(for: [expectation], timeout: 120)
+//        let imageData = SpotifyExampleImages.annabelle
+//        let encodedData = imageData.base64EncodedData()
+//
+//        print("encoded data count: ", encodedData.count)
+//
+//
+//        let expectation = XCTestExpectation(
+//            description: "uploadPlaylistImage"
+//        )
+//
+//        Self.spotify.uploadPlaylistImage(
+//            URIs.Playlists.test,
+//            imageData: encodedData
+//        )
+//        .XCTAssertNoFailure()
+//        .sink(receiveCompletion: { _ in
+//            expectation.fulfill()
+//        })
+//        .store(in: &Self.cancellables)
+//
+//        self.wait(for: [expectation], timeout: 120)
 
     }
 

@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.2
 
 import PackageDescription
 
@@ -28,21 +28,21 @@ let package = Package(
                 .product(name: "OpenCombine", package: "OpenCombine"),
                 .product(name: "OpenCombineDispatch", package: "OpenCombine"),
                 .product(name: "OpenCombineFoundation", package: "OpenCombine")
-            ],
-            exclude: ["README.md"]
+            ]
+//            exclude: ["README.md"]
         ),
         .target(
             name: "SpotifyExampleContent",
-            dependencies: ["SpotifyWebAPI"],
-            exclude: ["README.md"],
-            resources: [
-                .process("Resources")
-            ]
+            dependencies: ["SpotifyWebAPI"]
+//            exclude: ["README.md"],
+//            resources: [
+//                .process("Resources")
+//            ]
         ),
         .target(
             name: "SpotifyAPITestUtilities",
-            dependencies: spotifyAPITestUtilitiesDependencies,
-            exclude: ["README.md"]
+            dependencies: spotifyAPITestUtilitiesDependencies
+//            exclude: ["README.md"]
         ),
         
         // MARK: Test Targets
